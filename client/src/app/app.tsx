@@ -48,16 +48,16 @@ const App = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="p-4">Loading...</div>;
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <div className="p-4 text-red-600">Error: {error.message}</div>;
   }
 
   return (
-    <div className={styles["app"]}>
-      <h1>Ticketing App</h1>
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">Ticketing App</h1>
       <Routes>
         <Route
           path="/"
